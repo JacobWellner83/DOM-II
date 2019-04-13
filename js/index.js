@@ -39,3 +39,8 @@ window.addEventListener('load', function(event) {
     alert('Why did you reload me, Dave?');
 })   
 
+//Event 5- Keydown
+//Creates an event in which if a key is pressed down an alert populates.
+window.addEventListener('keydown', function(event){
+    alert('You pressed P? Why? You just dont listen.');
+})

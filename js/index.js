@@ -59,6 +59,7 @@ let resizeFont = document.querySelectorAll('.resizer');
 
 window.addEventListener('resize', function(event) {
 resizeFont.style.fontWeight = 40;
+    resizeFont.preventDefault();
 });
 
 //Event 8- Copy
@@ -69,3 +70,23 @@ document.addEventListener('copy', () => {
     selectedElement.style.background = "green";
 });
   
+//Event 9- MouseEnter
+//Creates a rotating Nav Event.
+let rotateNav = document.querySelector('.nav-link')
+document.addEventListener('mouseenter', () => {
+  setTimeout(() => {
+    logo.classList.add('rotate')
+  }, 1000)
+});
+
+//Event 10- MouseOut
+//Creates a mouseout Event.
+let pTags = document.querySelectorAll('p');
+
+pTags.forEach(function(){
+  this.addEventListener('mouseout', function(event){
+    event.target.style.color = 'grey'
+    event.target.style.fontWeight = 'bolder'
+    event.stopPropagation();
+  });
+});

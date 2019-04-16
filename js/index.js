@@ -59,4 +59,13 @@ let resizeFont = document.querySelectorAll('.resizer');
 
 window.addEventListener('resize', function(event) {
 resizeFont.style.fontWeight = 40;
-})
+});
+
+//Event 8- Copy
+//Created a Copy event that utilizes copy to highlight the background green if something is copied.
+document.addEventListener('copy', () => {
+    const selection = document.getSelection()
+    const selectedElement = selection.focusNode.parentElement
+    selectedElement.style.background = "green";
+});
+  

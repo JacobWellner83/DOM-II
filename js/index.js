@@ -44,3 +44,11 @@ window.addEventListener('load', function(event) {
 window.addEventListener('keydown', function(event){
     alert('You pressed P? Why? You just dont listen.');
 })
+
+//Event 6- Dblclick
+//Creates an event that adds a Black border to the Sunny Fun Button when it is Double Clicked.
+let button = document.querySelector(".btn");
+
+button.addEventListener("dblclick", function() {
+    this.style.border = "thick solid black";
+});
